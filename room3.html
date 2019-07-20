@@ -1,0 +1,284 @@
+﻿<html>
+<head>
+<style>
+/* Navigaton bar */
+ul {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
+
+li {
+    float: left;
+    width: 25%;
+}
+
+li a, .dropbtn {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+li a:hover, .dropbtn {
+    background-color: gray;
+}
+body {
+  margin: 0;
+  padding-top: 57px;
+}
+
+/* Parallax Scrolling */
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+.bgimg-1, .bgimg-2 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("http://i.imgur.com/Kce66Hp.jpg");
+  min-height: 100%;
+}
+
+.bgimg-2 {
+  background-image: url("");
+  min-height: 30%;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+
+/* modal image */
+.imgeffect img {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 300px;
+    height: 200px;
+} 
+.imgeffect img:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    z-index: 1000;
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#captionimg {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+.button {
+    font-family:'Times New Roman';
+    cursor:pointer;
+    display:inline-block;
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0 7px 20px 0;
+    padding: 8px 30px;
+    position:relative;
+    text-align:center;
+ -webkit-transition:all 0.2s linear;
+    -moz-transition:all 0.2s linear;
+    -o-transition:all 0.2s linear;
+    transition:all 0.2s linear; 
+    text-transform: uppercase;
+    border-radius: 1px;
+}
+
+.white.alt {
+ border: 1px solid #fff;
+ color: #fff;
+}
+
+.white:hover {
+    color: #686868;
+ background:#d2d2d2;
+}
+
+.white.alt:hover {
+ border: 1px solid #000!important;
+ background:#000;
+}
+</style>
+</head>
+
+<body>
+<!-- Navigation bar -->
+<ul type="none">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="Accommodations.html">Accommodation</a></li>
+  <li><a href="Reservation.html" target="_blank">Reservation</a></li>
+  <li><a href="Contact us.html">Contact us</a></li>
+</ul>
+
+<!-- Parallax Scrolling -->
+<div class="bgimg-1">
+  <div class="caption">
+  <span class="border" style="background-color:transparent;font-size:25px;color: #000000;">Executive Premier</span>
+  </div>
+</div>
+
+<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+  <h3 style="text-align:center;">EXECUTIVE PREMIER</h3>
+  <p>Enter the stately EXECUTIVE PREMIER on the uppermost floors to claim Malaysia's pinnacle luxury hotel experience as your own. Delight in the commanding splendour of your two beautiful living rooms, with every line and furnishing designed to emanate elegance and prestige. All four bedrooms feature an ensuite bathroom with a rain shower and Jacuzzi, and a private balcony where you can drink and dine with the glittering city laid out below your feet. A dedicated butler team is at your service day and night, ready to provide any convenience you could wish for, and assist with customised dining and entertainment for your in-suite events. Enjoy 629 square metres and choice of black-and-granite or gold-and-earth-toned with 4 bedrooms including master bedroom with His and Hers bathrooms, Frette luxury linens and pillow menu in your room. Came with powder room with adjoining salon, 3 furnished balconies, 2 living rooms including 1 with baby grand piano, 10-person dining table and Kitchenette with pantry, dry bar, fridge and microwave. Including nespresso machine and gourmet tea selections, fully stocked minibar, 4 bathrooms each with glass-enclosed shower and Jacuzzi, luxury bathroom amenities, microfibre and terry bathrobes, media room with karaoke,Flatscreen TVs in all bedrooms, living room, media room and salon, cable channels and movies on demand,billiards room with pool table,private gym room with exercise equipment, massage room, steam and sauna facilities, study room, executive work desk, all-in-one printer (scanner, printer, copier, fax), iPod/iPhone docking station with alarm and radio and in-suite cafe. Including with your stay with all full access to all area and special events.</p>
+</div>
+<div class="imgeffect">
+<div style="text-align:center;">
+  <img src="http://i.imgur.com/LWFotYJ.jpg" onclick="onclickImage(this)" alt="Living Room">
+  <img src="http://i.imgur.com/XCpBmSx.jpg" onclick="onclickImage(this)" alt="Balcony">
+  <img src="http://i.imgur.com/4ZKggwd.jpg" onclick="onclickImage(this)" alt="Bathroom">
+</div>
+</div>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">×</span>
+  <img class="modal-content" id="img">
+  <div id="captionimg"></div>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: center;">
+    <p><a class="button white alt" href="Reservation.html" target=_blank">Reserve A Room Now</a></p>
+  </div>
+</div>
+
+
+<script>
+var modal = document.getElementById('myModal');
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img");
+var captionText = document.getElementById("captionimg");
+
+function onclickImage(element) {
+    modal.style.display = "block";
+    modalImg.src = element.src;
+    modalImg.alt = element.alt;
+    captionText.innerHTML = element.alt;
+}
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+
+modal.onclick = function (event) {
+    if (event.target === modal)
+      modal.style.display = "none";
+}
+</script>
+</body>
+</html>

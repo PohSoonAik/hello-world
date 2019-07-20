@@ -1,0 +1,84 @@
+<html>
+<head>
+<style>
+/* Navigaton bar */
+ul {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
+
+li {
+    float: left;
+    width: 20%;
+}
+
+li a, .dropbtn {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+li a:hover, .dropbtn {
+    background-color: gray;
+}
+
+/* Parallax Scrolling */
+body, html {
+  height: 140%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+</style>
+<title>Login and Registration Form Design</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Navigation bar -->
+<ul type="none">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="Accommodations.html">Accommodation</a></li>
+  <li><a href="Reservation.html" target="_blank">Reservation</a></li>
+  <li><a href="Contact us.html">Contact us</a></li>
+  <li><a href="Login and registration.html">Login and Registration</a></li>
+</ul>
+<div class="login-page">
+<div class="form">
+	<form class="register-form">
+	<input type ="text" placeholder="name"/>
+	<input type ="text" placeholder="password"/>
+	<input type ="text" placeholder="email id"/>
+	<button>Create</button>
+	<p class="message">Already registered? <a href="#">Login</a></p>
+	</form>
+	
+	<form class="login-form">
+	<input type="text" placeholder="user name"/>
+	<input type="password" placeholder="password"/>
+	<button>login</button>
+	<p class="message">Not registered? <a href="#">Register</a></p>
+</div>
+</div>
+
+<script src='https://code.jquery.com/jquery-3.4.1.min.js'>
+</script>
+<script>
+$('.message a').click(function(){
+$('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+});
+</script>
+</body>
+</html>

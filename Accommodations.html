@@ -1,0 +1,365 @@
+﻿<html>
+<head>
+<style>
+/* Navigaton bar */
+ul {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
+
+li {
+    float: left;
+    width: 20%;
+}
+
+li a, .dropbtn {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+li a:hover, .dropbtn {
+    background-color: gray;
+}
+body {
+  margin: 0;
+  padding-top: 57px;
+}
+
+/* room image effect */
+body{
+    margin: 0;
+    padding: 0;
+    top: 0px;
+    overflow-x: hidden;
+    font-family: 'Lato', Tahoma, Arial, sans-serif;
+}
+ 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.flexbox{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+.item {
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: pointer;    
+}
+
+.item img {
+    position: relative;
+    display: block;
+    min-height: 100%;
+    max-width: 100%;
+    opacity: 0.7;
+}
+.item figcaption {
+    padding: 40% 20% 10%;
+    color: #fff;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.item figcaption::before,
+.item figcaption::after {
+    pointer-events: none;
+}
+.item figcaption,
+.item figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 40%);
+    height: calc(100% - 50%);
+}
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.item figcaption > a {
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+}
+.item h2 {
+    text-transform: uppercase;
+    font-size: 1.75em;
+    font-weight: 700;
+    min-height: 70px;
+}
+.item .select_desc {
+    font-family: 'Merriweather', 'Times New Roman', serif;
+    font-style: italic;
+    font-size: 0.8em;
+    font-weight: 300;
+    line-height: 1.6em;
+    text-align: center;
+}
+
+
+.item.effect-chico img {
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale(1.12);
+    transform: scale(1.12);
+}
+.item.effect-chico:hover img {
+    opacity: 1.0;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+.item.effect-chico figcaption {
+    padding: 40% 20%;
+}
+.item.effect-chico figcaption::before {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    bottom: 50px;
+    left: 50px;
+    /*border: 1px solid #ccc;*/
+    content: '';
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.item h2 {
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: all 0.35s ease, transform 0.35s;
+}
+
+.item.effect-chico figcaption::before,
+.item.effect-chico .select_desc {
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+}
+.item.effect-chico figcaption::before {
+    opacity: 0;
+}
+
+.item.effect-chico:hover figcaption::before{
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+.item.effect-chico:hover h2 {
+    margin-top: 50%;
+}
+.item.flex4.effect-chico:hover h2 {
+    margin-top: 25%;
+}
+.item.effect-chico:hover .select_desc {
+    opacity: 0;
+}
+#rooms_type .ds_row{
+    width: 100%;
+    align-items: center;
+    align-content: center;
+    position: relative;
+    margin: 0 auto;    
+    text-align: center;
+}
+#rooms_type{
+    padding: 6em 0;
+}
+.ds_row{
+}
+#rooms .outer_textwrap {
+    float: right;
+}
+
+/* Parallax Scrolling */
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("http://travelcentremaldives.com/maldives-blog/wp-content/uploads/2015/02/infinity-pool-patio-design.jpg");
+  min-height: 100%;
+}
+
+.bgimg-2 {
+  background-image: url("https://freshome.com/wp-content/uploads/2017/06/midcentury-cool-2-min.jpg");
+  min-height: 100%;
+}
+
+.bgimg-3 {
+  background-image: url("http://travelcentremaldives.com/maldives-blog/wp-content/uploads/2015/02/infinity-pool-patio-design.jpg");
+  min-height: 100%;
+}
+
+.bgimg-4 {
+  background-image: url("https://redrock.sclv.com/~/media/Images/Slideshow-Images/RedRock/RR_Hotel_Luxury_Living.jpg");
+  min-height: 100%;
+}
+.bgimg-5 {
+  background-image: url("http://5e4f7766bf88d0bae4df-b2f2b3008e253c4263158418b5a7bfe7.r15.cf1.rackcdn.com/lps/assets/u/W-London-Leicester-Square-Hotel-Gym-Soho.jpg");
+  min-height: 100%;
+}
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+
+/* Back to top */
+.scrolltop { 
+position: fixed; bottom: 0; right: 0; 
+}
+</style>
+</head>
+<body>
+<!-- Navigation bar -->
+<ul type="none">
+  <li><a href="index.html">Home</a></li>
+  <li><a href="Accommodations.html">Accommodation</a></li>
+  <li><a href="Reservation.html" target="_blank">Reservation</a></li>
+  <li><a href="Contact us.html">Contact us</a></li>
+  <li><a href="Login and registration.html">Login and Registration</a></li>
+</ul>
+
+<!-- Parallax Scrolling -->
+<div class="bgimg-1">
+  <div class="caption">
+    <span class="border">ACCOMMODATION</span>
+  </div>
+</div>
+
+<div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+  <h3 style="text-align:center;">OVERVIEW</h3>
+  <p>Holiday Resort, the world's largest and luxury Hotel in Malaysia, designed by Jupiter Han, is visually evocative of the mod 1960s design shot through with 21st century sensibility. Teak and chrome are the materials used in the furnishings with a sense of sleekness prevailing. Guest rooms and suites include flat-panel plasma TVs, I-Pod alarm clocks, wireless Internet access, irons and ironing boards, minibars, 400-thread-count linens, and spa amenities by Fresh. All rooms feature artwork from one of the world's most respected fashion photographers, William Teh.
+Blue Ribbon Sushi Bar and Grill, located off the lobby, serves Japanese cuisine and Blue Ribbon grill favorites for breakfast, lunch and dinner. Enjoy all the comforts of facility in Hotel Resort. With exclusive premium gym, outdoor pools, seaside events and more. 
+Watch the sun rise over the fantastic ocean from your room balcony or travel along the sea shores and at night you can enjoy the light show from the Skywheel as you listen and watch the waves hit the shore.</p>
+</div>
+
+<div class="bgimg-2">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #000000;">Exclusive Outdoor Pools</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+    <p>A living dream. Truly a magical and fascinating experience. Elegant, serenity and relaxing outdoor environment. Huge and awesome place that guarantee satisfy your will fulfillment towards swimming pools.  </p>
+  </div>
+</div>
+
+<div class="bgimg-3">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #000000;">Sea Side</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+    <p>Enjoy the world's largest and fascinating seaside in Holiday Resort, amazing scenery, peaceful shores and experience the chillest moment ever. </p>
+  </div>
+</div>
+
+<div class="bgimg-4">
+  <div class="caption">
+    <span class="border"style="background-color:transparent;font-size:30px;color: #000000;">Room and Suites</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:5px 10px;text-align: center;">
+        <div id="rooms_type">
+        <div class="ds_row flexbox">
+            <div class="item flex1 effect-chico">
+                <img src="http://i.imgur.com/pXF8Wuf.jpg?1" alt="Deluxe Room"/>        
+                <figcaption>
+                    <h2>Deluxe Room</h2>
+                    <div class="select_desc">Wide, spacious, and draped with grace; perfect for families or getaways.</div>
+                    <a href="room1.html">View more</a>
+                </figcaption>
+            </div>
+            <div class="item flex1 effect-chico">
+                <img src="http://i.imgur.com/gw8DmCW.jpg?1" alt="Executive Room"/>
+                <figcaption>
+                    <h2>Executive Room</h2>
+                    <div class="select_desc">Explore the true meaning of spacious comfort and elegant designs.</div>
+                    <a href="room2.html">View more</a>
+                </figcaption>
+            </div>
+            <div class="item flex1 effect-chico">
+                <img src="http://i.imgur.com/QAa1Dk6.jpg?1" alt="Executive Premier"/>
+                <figcaption>
+                    <h2>Executive Premier</h2>
+                    <div class="select_desc">Live on the edge of class in Executive Premier as sharp as your suit &amp; tie.</div>
+                    <a href="room3.html">View more</a>
+                </figcaption>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="bgimg-5">
+  <div class="caption">
+    <span class="border"style="background-color:transparent;font-size:30px;color: #000000;">THE GYM</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+    <p>First class gym you'll ever be all over around the world, full equipment and professional trainer guides.  </p>
+  </div>
+</div>
+
+<!-- back to top -->
+<a href="#" class="scrolltop">
+<img src="http://i1155.photobucket.com/albums/p559/scrolltotop/arrow13.png"
+</a>
+</body>
+</html>
